@@ -6,6 +6,11 @@ import TeamExperienceSection from "../app/components/TeamExperienceSection";
 import WorldSection from "../app/components/WorldSection";
 import WhyChooseUs from "../app/components/WhyChooseUs";
 import OurPortfolio from "../app/components/OurPortfolio";
+import PortfolioSection from "../app/components/PortfolioSection";
+import BrandLogo from "../app/components/BrandLogo";
+import BusinessPotentialSection from "../app/components/BusinessPotentialSection";
+import ServicesPackagesSection from "../app/components/ServicesPackagesSection";
+import HomePageServicesPackagesSection from "../app/components/HomePageServicesPackagesSection";
 
 export default function Home() {
   return (
@@ -19,6 +24,11 @@ export default function Home() {
         <WorldSection />
         <WhyChooseUs />
         <OurPortfolio />
+        <PortfolioSection />
+        <BrandLogo />
+        <BusinessPotentialSection />
+        <ServicesPackagesSection />
+        <HomePageServicesPackagesSection />
       </main>
     </>
   );

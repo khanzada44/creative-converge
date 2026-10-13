@@ -88,7 +88,7 @@ function StatCard({
           ease: [0.22, 1, 0.36, 1],
         }}
         whileHover={{ y: -8, scale: 1.03 }}
-        className="group relative flex h-[180px] w-full cursor-default flex-col items-center justify-center overflow-hidden rounded-none border-0 bg-[#2e8b57] text-center text-white shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-shadow duration-500 hover:shadow-[0_30px_70px_rgba(0,0,0,0.6)] sm:h-[210px] lg:h-[240px]"
+        className="group relative flex h-[180px] w-full cursor-default flex-col items-center justify-center overflow-hidden rounded-none border-0 bg-[#00D100] text-center text-white shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-shadow duration-500 hover:shadow-[0_30px_70px_rgba(0,0,0,0.6)] sm:h-[210px] lg:h-[240px]"
       >
         <div className="relative text-5xl font-semibold tracking-tight sm:text-[60px]">
           <Counter to={value} />
@@ -141,7 +141,7 @@ export default function WhyChooseUs() {
   return (
     <section
       ref={containerRef}
-      className="relative overflow-hidden bg-[#2e8b57] px-6 py-20 font-['Poppins',sans-serif] text-white sm:px-10 lg:px-[100px] lg:py-[130px]"
+      className="relative overflow-hidden bg-[#00D100] px-6 py-20 font-['Poppins',sans-serif] text-white sm:px-10 lg:px-[100px] lg:py-[130px]"
     >
       {/* Outlined "USA" background graphic with blend mode to avoid harsh overlapping shades */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none z-0 opacity-25">

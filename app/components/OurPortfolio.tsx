@@ -153,7 +153,7 @@ export default function OurLatestCases() {
                 setActiveItem(item);
                 setIsZoomed(false);
               }}
-              className="group relative h-[380px] w-full cursor-pointer overflow-hidden bg-neutral-900 sm:h-[450px]"
+              className="group relative h-[420px] w-full cursor-pointer overflow-hidden bg-neutral-900 sm:h-[450px]"
             >
               <Image
                 src={item.image}
