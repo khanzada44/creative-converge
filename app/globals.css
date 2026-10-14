@@ -11,7 +11,9 @@ p {
   font-family: "Poppins", Sans-serif !important;
   font-weight: 400;
 }
-
+.portfolio-heading{
+  color: #000 !important;
+}
 span {
   font-family: "Poppins", Sans-serif !important;
   font-weight: 400;
@@ -33,4 +35,7 @@ li{
     background: #2e8b57;
     border-radius: 4px;
 
+}
+a{
+  font-family: "Mulish", Sans-serif;
 }

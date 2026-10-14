@@ -11,6 +11,7 @@ import BrandLogo from "../app/components/BrandLogo";
 import BusinessPotentialSection from "../app/components/BusinessPotentialSection";
 import ServicesPackagesSection from "../app/components/ServicesPackagesSection";
 import HomePageServicesPackagesSection from "../app/components/HomePageServicesPackagesSection";
+import NewsletterSection from "../app/components/NewsletterSection";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <BusinessPotentialSection />
         <ServicesPackagesSection />
         <HomePageServicesPackagesSection />
+        <NewsletterSection />
       </main>
     </>
   );

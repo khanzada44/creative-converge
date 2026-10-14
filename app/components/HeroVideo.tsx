@@ -161,7 +161,7 @@ export default function HeroVideo() {
 
           {/* Video Player */}
           <div
-            className="relative w-full max-w-5xl overflow-hidden rounded-xl border border-white/10 bg-black shadow-2xl"
+            className="relative w-full max-w-5xl overflow-hidden   border border-white/10 bg-black shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
             <video

@@ -59,36 +59,68 @@ const packages = [
 const HomePageServicesPackagesSection = () => {
     return (
         <section className="relative w-full bg-black text-white py-8 px-4 sm:px-12 lg:px-8 overflow-hidden">
+            <style>{`
+                /* Chrome / Edge / Safari: arrows (up/down buttons) hata diye */
+                .features-scroll::-webkit-scrollbar {
+                    width: 12px;
+                }
+                .features-scroll::-webkit-scrollbar-button {
+                    display: none;
+                    width: 0;
+                    height: 0;
+                }
+                .features-scroll::-webkit-scrollbar-track {
+                    background: #232522;
+                    border-radius: 9999px;
+                }
+                .features-scroll::-webkit-scrollbar-thumb {
+                    background: #349758;
+                    border-radius: 9999px;
+                }
+                .features-scroll::-webkit-scrollbar-thumb:hover {
+                    background: #2d8650;
+                }
+                /* Sirf Firefox ke liye (Chrome mein ye arrows wapas la deta hai) */
+                @supports not selector(::-webkit-scrollbar) {
+                    .features-scroll {
+                        scrollbar-width: auto;
+                        scrollbar-color: #349758 #232522;
+                    }
+                }
+            `}</style>
+
             <div className="bg-black text-white rounded-2xl p-6 sm:p-10 lg:p-14">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-0 max-w-7xl mx-auto w-full">
                     {packages.map((pkg, index) => (
                         <div
                             key={index}
-                            className="group flex flex-col h-full bg-white hover:bg-[#1a1c27] transition-all duration-300 ease-out hover:-translate-y-4 hover:shadow-2xl hover:shadow-emerald-900/30 cursor-pointer"
+                            className="group flex flex-col h-full bg-white hover:bg-neutral-50 transition-all duration-300 ease-out hover:-translate-y-4 hover:shadow-2xl hover:shadow-emerald-900/40 cursor-pointer"
                         >
-                            {/* Header: hover par green */}
-                            <div className="px-5 pt-[50px] pb-8 text-center transition-colors duration-300 group-hover:bg-[#00D100]">
-                                <h3 className="font-bold text-base sm:text-lg mb-6 tracking-wide text-black">
+                            {/* Header: hover par green + white text */}
+                            <div className="px-6 pt-[50px] pb-9 text-center text-neutral-900 transition-colors duration-300 group-hover:bg-[#339955] group-hover:text-white">
+                                <h3 className="font-bold text-xl sm:text-[22px] mb-6 tracking-wide">
                                     {pkg.title}
                                 </h3>
 
-                                <div className="flex items-start ju stify-center text-black">
-                                    <span className="text-xl font-bold mt-2">$</span>
-                                    <span className="text-5xl font-light tracking-tight">
+                                <div className="flex items-start justify-center">
+                                    <span className="text-3xl font-semibold mt-3">$</span>
+                                    <span className="text-7xl font-light tracking-tight leading-none">
                                         {pkg.price}
                                     </span>
-                                    <span className="text-xl font-bold mt-2">{pkg.cents}</span>
+                                    <span className="text-3xl font-semibold mt-3">{pkg.cents}</span>
                                 </div>
-                                <p className="text-xs text-black mt-2">{pkg.addOn}</p>
+                                <p className="text-sm sm:text-base font-medium mt-4 text-neutral-600 transition-colors duration-300 group-hover:text-white/90">
+                                    {pkg.addOn}
+                                </p>
                             </div>
 
-                            {/* Features: lamba area + scrollbar */}
-                            <div className="px-5 my-10 flex-1">
-                                <ul className="features-scroll h-64 overflow-y-scroll space-y-5 pr-3">
+                            {/* Features: fixed height + scrollbar */}
+                            <div className="px-6 my-10 flex-1">
+                                <ul className="features-scroll h-72 overflow-y-scroll space-y-6 pr-4">
                                     {pkg.features.map((feature, fIndex) => (
                                         <li
                                             key={fIndex}
-                                            className="text-xs text-black text-center"
+                                            className="text-base font-medium text-neutral-800 text-center leading-snug"
                                         >
                                             {feature}
                                         </li>
@@ -98,7 +130,7 @@ const HomePageServicesPackagesSection = () => {
 
                             {/* Buy Now */}
                             <div className="text-center pb-[50px] mt-auto">
-                                <button className="text-base font-medium text-black hover:text-emerald-400 transition-colors duration-200">
+                                <button className="rounded-full border-2 border-neutral-900 px-10 py-3 text-lg font-semibold tracking-wide text-neutral-900 transition-all duration-300 group-hover:border-[#339955] group-hover:bg-[#339955] group-hover:text-white">
                                     Buy now
                                 </button>
                             </div>
@@ -106,10 +138,10 @@ const HomePageServicesPackagesSection = () => {
                     ))}
                 </div>
 
-                <div className="text-center mt-5">
+                <div className="text-center mt-8">
                     <a
                         href="#view-more"
-                        className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-emerald-400 hover:underline"
+                        className="text-sm sm:text-base  tracking-[0.2em] uppercase text-emerald-400 hover:underline"
                     >
                         VIEW MORE
                     </a>
