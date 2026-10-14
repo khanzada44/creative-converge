@@ -103,7 +103,7 @@ export default function OurLatestCases() {
       <div className="relative mb-14 flex flex-col md:flex-row md:items-end md:justify-between">
         
         {/* Background Large Watermark Text */}
-        <span className="pointer-events-none absolute -top-10 left-0 z-0 select-none text-7xl font-bold uppercase tracking-wider text-white/[0.04] sm:text-8xl md:-top-16 lg:text-[140px]">
+        <span className="pointer-events-none absolute -top-10 left-0 z-0 select-none text-7xl   uppercase tracking-wider text-white/[0.04] sm:text-8xl md:-top-16 lg:text-[140px]">
           portfolio
         </span>
 
@@ -119,8 +119,8 @@ export default function OurLatestCases() {
           </Reveal>
 
           <Reveal from={0.85} delay={200}>
-            <h2 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
-              Our latest cases<span className="text-[#2e8b57]">.</span>
+            <h2 className="mt-2 text-4xl   tracking-tight sm:text-5xl lg:text-6xl">
+              Our latest cases<span className="text-[#00A8A8]">.</span>
             </h2>
           </Reveal>
 
@@ -135,7 +135,7 @@ export default function OurLatestCases() {
           <Reveal from={0.9} delay={400}>
             <a
               href="#all-cases"
-              className="group inline-flex items-center gap-2 text-sm font-medium tracking-wider text-white transition-colors hover:text-[#2e8b57]"
+              className="group inline-flex items-center gap-2 text-sm font-medium tracking-wider text-white transition-colors hover:text-[#00A8A8]"
             >
               VIEW ALL CASES
               
@@ -166,8 +166,8 @@ export default function OurLatestCases() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90" />
 
               <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                <span className="text-xs font-medium text-[#2e8b57] mb-1">{item.category}</span>
-                <h3 className="text-lg font-semibold leading-snug sm:text-xl">
+                <span className="text-xs font-medium text-[#00A8A8] mb-1">{item.category}</span>
+                <h3 className="text-lg   leading-snug sm:text-xl">
                   {item.title}
                 </h3>
 
@@ -234,7 +234,7 @@ export default function OurLatestCases() {
                   </button>
                   <button
                     onClick={() => setActiveItem(null)}
-                    className="p-1 text-xl font-bold text-white/70 transition-colors hover:text-white"
+                    className="p-1 text-xl   text-white/70 transition-colors hover:text-white"
                     title="Close"
                   >
                     ✕
@@ -276,7 +276,7 @@ export default function OurLatestCases() {
 
                 {/* Footer */}
                 <div className="relative z-20 py-3 text-center">
-                  <span className="text-sm font-semibold tracking-wider text-white/80">
+                  <span className="text-sm   tracking-wider text-white/80">
                     {activeItem.title}
                   </span>
                 </div>

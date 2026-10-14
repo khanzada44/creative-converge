@@ -29,7 +29,7 @@ return (
       {/* Subtitle with horizontal line */}
       <div className="relative z-10 flex items-center space-x-3 mb-4">
         <span className="w-12 h-[2px] bg-white inline-block"></span>
-        <span className="text-xs uppercase tracking-widest text-gray-400 font-semibold">
+        <span className="text-xs uppercase tracking-widest text-gray-400  ">
           let's get started
         </span>
       </div>
@@ -88,7 +88,7 @@ return (
         <div>
           <button
             type="submit"
-            className="inline-flex items-center text-xs font-semibold tracking-widest uppercase text-white hover:text-emerald-400 transition-colors pt-2"
+            className="inline-flex items-center text-xs   tracking-widest uppercase text-white hover:text-[#00A8A8] transition-colors pt-2"
           >
             Send Message
           </button>

@@ -13,7 +13,7 @@ const BrandLogo = () => {
     ];
 
     return (
-        <section className="relative w-full bg-[#0a0a0a] text-white py-16 px-4 overflow-hidden border-b-2 border-emerald-600">
+        <section className="relative w-full bg-[#0a0a0a] text-white py-16 px-4 overflow-hidden border-b-2 border-[#00A8A8]">
 
             {/* Left Decorative Wavy / Organic Line (Static & Elegant) */}
 

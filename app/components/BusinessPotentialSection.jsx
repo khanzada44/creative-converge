@@ -203,10 +203,10 @@ export default function TeamExperienceSection() {
     ];
 
     return (
-        <section className="relative w-full bg-[#349758] text-white py-10 px-2 lg:px-10 overflow-hidden">
+      <section className="relative w-full bg-gradient-to-r from-[#00A8A8] via-[#18D0C8] to-[#00F2FE] text-white py-10 px-2 lg:px-10 overflow-hidden">
             <div className="max-w-[1200px] mx-auto w-full flex flex-col gap-14">
                 <Reveal delay={50}>
-                    <span className="text-xs sm:text-sm font-semibold tracking-wider uppercase text-emerald-200">
+                    <span className="text-xs sm:text-sm   tracking-wider uppercase text-white">
                         Innovate
                     </span>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mt-2 max-w-2xl leading-tight">
@@ -239,7 +239,7 @@ export default function TeamExperienceSection() {
                                                 className="w-12 h-12 object-contain"
                                             />
                                         </div>
-                                        <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
+                                        <h3 className="text-xl   mb-3">{feature.title}</h3>
                                         <p className="text-white/80 text-sm leading-relaxed mb-6">
                                             {feature.description}
                                         </p>
@@ -248,9 +248,9 @@ export default function TeamExperienceSection() {
                                     <div>
                                         <a
                                             href="#learn-more"
-                                            className="inline-flex items-center space-x-2 text-sm font-semibold text-white hover:text-emerald-200 transition-colors group"
+                                            className="inline-flex items-center space-x-2 text-sm   text-white hover:text-white transition-colors group"
                                         >
-                                            <span className="w-6 h-6 rounded-full bg-white text-[#349758] flex items-center justify-center group-hover:bg-emerald-100 transition-colors">
+                                            <span className="w-6 h-6 rounded-full bg-white text-[#00A8A8] flex items-center justify-center group-hover:bg-emerald-100 transition-colors">
                                                 <ArrowRight className="w-3.5 h-3.5" />
                                             </span>
                                             <span>Learn More</span>

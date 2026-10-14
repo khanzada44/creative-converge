@@ -77,100 +77,97 @@ export default function AboutSection() {
     };
   }, []);
 
-return (
-  <>
-    <section
-      ref={sectionRef}
-      className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden bg-[#12161f]"
-    >
-      {/* Left Side: Background Image / Dashboard Graphic */}
-      <div className="relative w-full lg:w-1/2 h-[50vh] lg:h-auto min-h-[400px]">
-        <img
-          src="https://creativeconverge.com/mockups/creativemock/wp-content/uploads/2024/07/Group-691314592-1.jpg"
-          alt="Digital Solution Background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/20"></div>
-      </div>
-
-      {/* Right Side: Dark Area with Text & Animated Rocket */}
-      <div className="relative w-full lg:w-1/2 bg-[#161b22] text-white flex items-center px-8 lg:px-16 py-16 overflow-hidden">
-        
-        {/* Background Watermark Text */}
-        <span className="pointer-events-none absolute -top-6 left-4 lg:left-10 z-0 select-none text-7xl font-extrabold uppercase tracking-widest text-white/[0.03] sm:text-8xl md:-top-10 lg:text-[130px]">
-          ABOUT
-        </span>
-
-        {/* Text Content (Foreground) */}
-        <div ref={textRef} className="relative z-10 max-w-xl">
-          {/* Label: hamesha dikhta hai */}
-          <div className="flex items-center space-x-3 mb-3">
-            <span className="w-10 h-[2px] bg-white inline-block"></span>
-            <span className="text-xs uppercase tracking-widest text-gray-400 font-semibold">
-              about us
-            </span>
-          </div>
-
-          {/* Heading: fade + halka zoom */}
-          <h2
-            className={`text-3xl lg:text-5xl font-bold tracking-tight mb-6 leading-tight ${
-              showText ? "zoom-heading" : "opacity-0"
-            }`}
-          >
-            We are Experts in{" "}
-            <span className="text-white">Digital Solution</span>
-          </h2>
-
-          {/* Paragraph 1: zoom in */}
-          <p
-            className={`text-gray-300 text-sm lg:text-base leading-relaxed mb-4 ${
-              showText ? "zoom-in zoom-delay-1" : "opacity-0"
-            }`}
-          >
-            At <strong className="text-white">WEBS DESIGN USA</strong>, we are
-            passionate about crafting visually stunning and high-performing
-            websites through innovative designers, skilled developers, and
-            strategic marketers, we transform ideas into digital realities.
-          </p>
-
-          {/* Paragraph 2: zoom in, thori der baad */}
-          <p
-            className={`text-gray-400 text-sm lg:text-base leading-relaxed mb-8 ${
-              showText ? "zoom-in zoom-delay-2" : "opacity-0"
-            }`}
-          >
-            Our expertise spans across responsive web design, e-commerce
-            development, and user experience, we pride ourselves on creating
-            websites that not only look great but also rank higher on search
-            engines, driving organic traffic.
-          </p>
-
-          {/* Read more */}
-          <div>
-            <a
-              href="#read-more"
-              className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold text-sm tracking-wider uppercase transition-colors"
-            >
-              READ MORE &gt;
-            </a>
-          </div>
-        </div>
-
-        {/* Rocket */}
-        <div
-          ref={rocketRef}
-          className="absolute bottom-14 -right-12 w-64 lg:w-[420px] pointer-events-none z-30 will-change-transform"
-          style={{ transform: "translate3d(0, 0, 0)" }}
-        >
+  return (
+    <>
+      <section
+        ref={sectionRef}
+        className="relative w-full min-h-screen flex flex-col lg:flex-row overflow-hidden bg-[#12161f]"
+      >
+        {/* Left Side: Background Image / Dashboard Graphic */}
+        <div className="relative w-full lg:w-1/2 h-[50vh] lg:h-auto min-h-[400px]">
           <img
-            src="https://creativeconverge.com/mockups/creativemock/wp-content/uploads/2024/08/rocket-contact.png"
-            alt="Rocket Graphic"
-            className="block w-full h-auto object-contain"
+            src="https://creativeconverge.com/mockups/creativemock/wp-content/uploads/2024/07/Group-691314592-1.jpg"
+            alt="Digital Solution Background"
+            className="absolute inset-0 w-full h-full object-cover"
           />
+          <div className="absolute inset-0 bg-black/20"></div>
         </div>
-      </div>
 
-      <style jsx>{`
+        {/* Right Side: Dark Area with Text & Animated Rocket */}
+        <div className="relative w-full lg:w-1/2 bg-[#161b22] text-white flex items-center px-8 lg:px-16 py-16 overflow-hidden">
+
+          {/* Background Watermark Text */}
+          <span className="pointer-events-none absolute -top-6 left-4 lg:left-10 z-0 select-none text-7xl font-extrabold uppercase tracking-widest text-white/[0.03] sm:text-8xl md:-top-10 lg:text-[130px]">
+            ABOUT
+          </span>
+
+          {/* Text Content (Foreground) */}
+          <div ref={textRef} className="relative z-10 max-w-xl">
+            {/* Label: hamesha dikhta hai */}
+            <div className="flex items-center space-x-3 mb-3">
+              <span className="w-10 h-[2px] bg-white inline-block"></span>
+              <span className="text-xs uppercase tracking-widest text-gray-400  ">
+                about us
+              </span>
+            </div>
+
+            {/* Heading: fade + halka zoom */}
+            <h2
+              className={`text-3xl lg:text-5xl   tracking-tight mb-6 leading-tight ${showText ? "zoom-heading" : "opacity-0"
+                }`}
+            >
+              We are Experts in{" "}
+              <span className="text-white">Digital Solution</span>
+            </h2>
+
+            {/* Paragraph 1: zoom in */}
+            <p
+              className={`text-gray-300 text-sm lg:text-base leading-relaxed mb-4 ${showText ? "zoom-in zoom-delay-1" : "opacity-0"
+                }`}
+            >
+              At <strong className="text-white">WEBS DESIGN USA</strong>, we are
+              passionate about crafting visually stunning and high-performing
+              websites through innovative designers, skilled developers, and
+              strategic marketers, we transform ideas into digital realities.
+            </p>
+
+            {/* Paragraph 2: zoom in, thori der baad */}
+            <p
+              className={`text-gray-400 text-sm lg:text-base leading-relaxed mb-8 ${showText ? "zoom-in zoom-delay-2" : "opacity-0"
+                }`}
+            >
+              Our expertise spans across responsive web design, e-commerce
+              development, and user experience, we pride ourselves on creating
+              websites that not only look great but also rank higher on search
+              engines, driving organic traffic.
+            </p>
+
+            {/* Read more */}
+            <div>
+              <a
+                href="#read-more"
+                className="inline-flex items-center text-[#00A8A8] hover:text-[#18D0C8]   text-sm tracking-wider uppercase transition-colors duration-300"
+              >
+                READ MORE
+              </a>
+            </div>
+          </div>
+
+          {/* Rocket */}
+          <div
+            ref={rocketRef}
+            className="absolute bottom-14 -right-12 w-64 lg:w-[420px] pointer-events-none z-30 will-change-transform"
+            style={{ transform: "translate3d(0, 0, 0)" }}
+          >
+            <img
+              src="https://creativeconverge.com/mockups/creativemock/wp-content/uploads/2024/08/rocket-contact.png"
+              alt="Rocket Graphic"
+              className="block w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+
+        <style jsx>{`
         @keyframes zoomIn {
           0% {
             opacity: 0;
@@ -211,7 +208,7 @@ return (
           animation-delay: 0.5s;
         }
       `}</style>
-    </section>
-  </>
-);
+      </section>
+    </>
+  );
 }

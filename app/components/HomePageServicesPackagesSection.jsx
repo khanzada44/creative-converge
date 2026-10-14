@@ -74,7 +74,7 @@ const HomePageServicesPackagesSection = () => {
                     border-radius: 9999px;
                 }
                 .features-scroll::-webkit-scrollbar-thumb {
-                    background: #349758;
+                    background: #00A8A8;
                     border-radius: 9999px;
                 }
                 .features-scroll::-webkit-scrollbar-thumb:hover {
@@ -84,7 +84,7 @@ const HomePageServicesPackagesSection = () => {
                 @supports not selector(::-webkit-scrollbar) {
                     .features-scroll {
                         scrollbar-width: auto;
-                        scrollbar-color: #349758 #232522;
+                        scrollbar-color: #00A8A8 #232522;
                     }
                 }
             `}</style>
@@ -97,17 +97,17 @@ const HomePageServicesPackagesSection = () => {
                             className="group flex flex-col h-full bg-white hover:bg-neutral-50 transition-all duration-300 ease-out hover:-translate-y-4 hover:shadow-2xl hover:shadow-emerald-900/40 cursor-pointer"
                         >
                             {/* Header: hover par green + white text */}
-                            <div className="px-6 pt-[50px] pb-9 text-center text-neutral-900 transition-colors duration-300 group-hover:bg-[#339955] group-hover:text-white">
-                                <h3 className="font-bold text-xl sm:text-[22px] mb-6 tracking-wide">
+                            <div className="px-6 pt-[50px] pb-9 text-center text-neutral-900 transition-colors duration-300 group-hover:bg-[#00A8A8] group-hover:text-white">
+                                <h3 className="  text-xl sm:text-[22px] mb-6 tracking-wide">
                                     {pkg.title}
                                 </h3>
 
                                 <div className="flex items-start justify-center">
-                                    <span className="text-3xl font-semibold mt-3">$</span>
+                                    <span className="text-3xl   mt-3">$</span>
                                     <span className="text-7xl font-light tracking-tight leading-none">
                                         {pkg.price}
                                     </span>
-                                    <span className="text-3xl font-semibold mt-3">{pkg.cents}</span>
+                                    <span className="text-3xl   mt-3">{pkg.cents}</span>
                                 </div>
                                 <p className="text-sm sm:text-base font-medium mt-4 text-neutral-600 transition-colors duration-300 group-hover:text-white/90">
                                     {pkg.addOn}
@@ -130,7 +130,7 @@ const HomePageServicesPackagesSection = () => {
 
                             {/* Buy Now */}
                             <div className="text-center pb-[50px] mt-auto">
-                                <button className="rounded-full border-2 border-neutral-900 px-10 py-3 text-lg font-semibold tracking-wide text-neutral-900 transition-all duration-300 group-hover:border-[#339955] group-hover:bg-[#339955] group-hover:text-white">
+                                <button className="rounded-full border-2 border-neutral-900 px-10 py-3 text-lg   tracking-wide text-neutral-900 transition-all duration-300 group-hover:border-[#00A8A8] group-hover:bg-[#00A8A8] group-hover:text-white">
                                     Buy now
                                 </button>
                             </div>
@@ -141,7 +141,7 @@ const HomePageServicesPackagesSection = () => {
                 <div className="text-center mt-8">
                     <a
                         href="#view-more"
-                        className="text-sm sm:text-base  tracking-[0.2em] uppercase text-emerald-400 hover:underline"
+                        className="text-sm sm:text-base text-[#fff] hover:underline"
                     >
                         VIEW MORE
                     </a>

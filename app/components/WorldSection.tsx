@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
-const BRAND_GREEN = "#349758";
+const BRAND_GREEN = "#00A8A8";
 
 const accordionData = [
   {
@@ -116,7 +116,7 @@ export default function WorldSection() {
         {/* Left Side Content with Reveal Animations */}
         <div className="flex flex-col items-start">
           <Reveal from={0.8} delay={100}>
-            <h2 className="mb-6 text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[68px]">
+            <h2 className="mb-6 text-4xl   leading-[1.1] tracking-tight sm:text-5xl lg:text-[68px]">
               Create your own
               <br />
               <span style={{ color: BRAND_GREEN }}>world</span> right now

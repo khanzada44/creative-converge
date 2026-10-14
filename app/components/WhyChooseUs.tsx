@@ -64,7 +64,7 @@ function Counter({ to }: { to: number }) {
   return <span ref={ref}>{n}</span>;
 }
 
-/* Stat card with solid #2e8b57 background, shadow, no border, no radius */
+/* Stat card with solid #00A8A8 background, shadow, no border, no radius */
 function StatCard({
   motionStyle,
   value,
@@ -88,9 +88,9 @@ function StatCard({
           ease: [0.22, 1, 0.36, 1],
         }}
         whileHover={{ y: -8, scale: 1.03 }}
-        className="group relative flex h-[180px] w-full cursor-default flex-col items-center justify-center overflow-hidden rounded-none border-0 bg-[#00D100] text-center text-white shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-shadow duration-500 hover:shadow-[0_30px_70px_rgba(0,0,0,0.6)] sm:h-[210px] lg:h-[240px]"
+        className="group relative flex h-[180px] w-full cursor-default flex-col items-center justify-center overflow-hidden rounded-none border-0 bg-[linear-gradient(135deg,#0B1F2A_0%,#00A8A8_50%,#18D0C8_75%,#00F2FE_100%)] text-center text-white shadow-[0_20px_50px_rgba(0,0,0,0.4)] transition-shadow duration-500 hover:shadow-[0_30px_70px_rgba(0,0,0,0.6)] sm:h-[210px] lg:h-[240px]"
       >
-        <div className="relative text-5xl font-semibold tracking-tight sm:text-[60px]">
+        <div className="relative text-5xl   tracking-tight sm:text-[60px]">
           <Counter to={value} />
         </div>
 
@@ -139,10 +139,11 @@ export default function WhyChooseUs() {
   const card4Y = useTransform(smooth, stops, wide ? [150, R, R] : [0, 0, 0]); 
 
   return (
-    <section
-      ref={containerRef}
-      className="relative overflow-hidden bg-[#00D100] px-6 py-20 font-['Poppins',sans-serif] text-white sm:px-10 lg:px-[100px] lg:py-[130px]"
-    >
+
+<section
+  ref={containerRef}
+  className="relative overflow-hidden bg-[linear-gradient(135deg,#0B1F2A_0%,#00A8A8_50%,#18D0C8_75%,#00F2FE_100%)] px-6 py-20 font-['Poppins',sans-serif] text-white sm:px-10 lg:px-[100px] lg:py-[130px]"
+>
       {/* Outlined "USA" background graphic with blend mode to avoid harsh overlapping shades */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden pointer-events-none select-none z-0 opacity-25">
         <div className="flex w-max animate-marquee">
@@ -222,14 +223,14 @@ export default function WhyChooseUs() {
 
           {/* Heading */}
           <Reveal from={0.185} delay={200}>
-            <h2 className="relative z-10 mt-2 text-5xl font-semibold leading-tight tracking-tight sm:text-6xl lg:text-[72px]">
+            <h2 className="relative z-10 mt-2 text-5xl   leading-tight tracking-tight sm:text-6xl lg:text-[72px]">
               Why choose us
             </h2>
           </Reveal>
 
           {/* Description */}
           <Reveal from={0.129} delay={300}>
-            <p className="relative z-10 mt-3 max-w-[760px] text-base font-normal leading-relaxed sm:text-lg text-white/90">
+            <p className="relative z-10 mt-3 max-w-[760px] text-base font-normal leading-relaxed sm:text-lg text-white">
               We’ve got a lot of awards for our products and services that became
               popular in the world.
             </p>
@@ -241,7 +242,7 @@ export default function WhyChooseUs() {
               <h3 className="text-xl font-medium sm:text-2xl">
                 Modern Technologies
               </h3>
-              <p className="mt-3 text-sm font-light leading-[1.7] sm:text-[15px] text-white/80">
+              <p className="mt-3 text-sm font-light leading-[1.7] sm:text-[15px] text-white">
                 As a web design company, we utilize a range of modern technologies
                 to create dynamic, responsive websites. We use design tools like
                 Figma, Adobe XD, and Sketch for collaborative, high-quality design
@@ -259,7 +260,7 @@ export default function WhyChooseUs() {
               <h3 className="text-xl font-medium sm:text-2xl">
                 Huge Digital Experience
               </h3>
-              <p className="mt-3 text-sm font-light leading-[1.7] sm:text-[15px] text-white/80">
+              <p className="mt-3 text-sm font-light leading-[1.7] sm:text-[15px] text-white">
                 Our company has been developing digital products for 15 years.
                 We’ve got a lot of awards for our work.
               </p>

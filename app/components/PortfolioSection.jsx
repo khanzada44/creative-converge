@@ -323,15 +323,15 @@ export default function OurPortfolioSection() {
                 <button
                   key={category}
                   onClick={() => setActiveCategory(category)}
-                  className={`relative pb-3 text-sm sm:text-base font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                  className={`relative pb-3 text-sm sm:text-base   transition-all duration-200 cursor-pointer whitespace-nowrap ${
                     isActive
-                      ? "text-emerald-600"
+                      ? "text-[#00A8A8]"
                       : "text-slate-500 hover:text-slate-800"
                   }`}
                 >
                   {category}
                   {isActive && (
-                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-600 rounded-full transition-all duration-300" />
+                    <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#00A8A8] rounded-full transition-all duration-300" />
                   )}
                 </button>
               );
@@ -370,7 +370,7 @@ export default function OurPortfolioSection() {
 
         {/* Portfolio Title */}
         {/* <div className="w-full shrink-0 text-center pt-2">
-          <h3 className="text-black text-sm font-semibold">
+          <h3 className="text-black text-sm  ">
             {item.title}
           </h3>
 
@@ -396,7 +396,7 @@ export default function OurPortfolioSection() {
 
         {/* View All Button */}
         <div className="mt-12 text-center">
-          <button className="inline-flex items-center space-x-1.5 text-emerald-600 hover:text-emerald-700 font-bold tracking-widest text-xs sm:text-sm uppercase transition-all duration-200 group border-b-2 border-emerald-600/30 hover:border-emerald-600 pb-0.5">
+          <button className="inline-flex items-center space-x-1.5 text-[#00A8A8] hover:text-emerald-700   tracking-widest text-xs sm:text-sm uppercase transition-all duration-200 group border-b-2 border-[#00A8A8]/30 hover:border-[#00A8A8] pb-0.5">
             <span>VIEW ALL</span>
             <ChevronRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
           </button>
@@ -491,7 +491,7 @@ export default function OurPortfolioSection() {
                   </button>
                   <button
                     onClick={() => setActiveItem(null)}
-                    className="p-1 text-xl font-bold text-white/70 transition-colors hover:text-white"
+                    className="p-1 text-xl   text-white/70 transition-colors hover:text-white"
                     title="Close"
                   >
                     <X className="w-6 h-6" />
@@ -535,9 +535,9 @@ export default function OurPortfolioSection() {
 
                 {/* Footer Info */}
                 <div className="relative z-20 py-3 text-center">
-                  <span className="text-sm font-semibold tracking-wider text-white/90">
+                  <span className="text-sm   tracking-wider text-white/90">
                     {activeItem.title}{" "}
-                    <span className="text-emerald-400">{activeItem.sub}</span>
+                    <span className="text-[#00A8A8]">{activeItem.sub}</span>
                   </span>
                 </div>
               </motion.div>

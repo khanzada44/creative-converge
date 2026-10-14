@@ -144,7 +144,7 @@ function StatCircle({
         <span className="text-6xl lg:text-7xl font-light tracking-tight mb-2">
           <CountUp to={to} active={inView} />
         </span>
-        <span className="text-sm lg:text-base text-white/90">{label}</span>
+        <span className="text-sm lg:text-base text-white">{label}</span>
       </div>
     </div>
   );
@@ -154,7 +154,7 @@ function Label({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex items-center space-x-3 mb-3">
       <span className="w-12 h-[1px] bg-white/80 inline-block"></span>
-      <span className="text-xs tracking-wide text-white/90">{children}</span>
+      <span className="text-xs tracking-wide text-white">{children}</span>
     </div>
   );
 }
@@ -206,7 +206,7 @@ export default function TeamExperienceSection() {
   }, []);
 
 return (
-  <section className="relative w-full bg-[#349758] text-white py-18 px-4 lg:px-18 overflow-hidden">
+  <section className="relative w-full bg-[linear-gradient(135deg,#0B1F2A_0%,#00A8A8_50%,#18D0C8_75%,#00F2FE_100%)] text-white py-18 px-4 lg:px-18 overflow-hidden">
     <div className="max-w-[1200px] mx-auto w-full flex flex-col gap-24">
       {/* ROW 1: text left, 15 Awards circle right */}
       <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -227,7 +227,7 @@ return (
           </Reveal>
 
           <Reveal from={0.4} delay={150}>
-            <p className="text-white/90 text-sm lg:text-base leading-relaxed mb-4">
+            <p className="text-white text-sm lg:text-base leading-relaxed mb-4">
               Our creative and professional agency has been developing
               products for 15 years. We are special.
             </p>
@@ -266,13 +266,13 @@ return (
 
         <div className="flex flex-col items-start max-w-[560px]">
           <Reveal from={0.9}>
-            <h3 className="text-2xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h3 className="text-2xl lg:text-4xl   tracking-tight mb-6">
               How our working day starts
             </h3>
           </Reveal>
 
           <Reveal from={0.4} delay={150}>
-            <p className="text-white/90 text-sm lg:text-base leading-relaxed mb-4">
+            <p className="text-white text-sm lg:text-base leading-relaxed mb-4">
               A typical day at a web design company begins with a team huddle
               to align on priorities and check emails or messages. The team
               then focuses on client communication, planning, and
@@ -297,13 +297,13 @@ return (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col items-start max-w-[560px]">
           <Reveal from={0.9}>
-            <h3 className="text-2xl lg:text-4xl font-bold tracking-tight mb-6">
+            <h3 className="text-2xl lg:text-4xl   tracking-tight mb-6">
               Individual approach
             </h3>
           </Reveal>
 
           <Reveal from={0.4} delay={150}>
-            <p className="text-white/90 text-sm lg:text-base leading-relaxed mb-4">
+            <p className="text-white text-sm lg:text-base leading-relaxed mb-4">
               As a web design company, our individual approach is centered
               around creativity, collaboration, and client satisfaction. We
               take the time to understand each client’s unique needs, goals,

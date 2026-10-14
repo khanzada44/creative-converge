@@ -75,7 +75,7 @@ export default function HeroVideo() {
           className="hero-content max-w-5xl"
         >
           {/* Welcome Text */}
-          <h3 className="hero-item hero-welcome mb-2 text-xl font-semibold tracking-wide text-white sm:text-2xl md:text-3xl">
+          <h3 className="hero-item hero-welcome mb-2 text-xl   tracking-wide text-white sm:text-2xl md:text-3xl">
             {activeContent.welcome}
           </h3>
 
@@ -85,7 +85,7 @@ export default function HeroVideo() {
           </h1>
 
           {/* Subtitle */}
-          <div className="hero-item hero-subtitle mb-5 flex items-start gap-3 text-base font-semibold leading-relaxed text-white sm:text-lg md:text-xl">
+          <div className="hero-item hero-subtitle mb-5 flex items-start gap-3 text-base   leading-relaxed text-white sm:text-lg md:text-xl">
             <span className="mt-3 inline-block h-[2px] w-10 shrink-0 bg-white sm:w-14" />
 
             <p className="max-w-4xl">
@@ -103,11 +103,11 @@ export default function HeroVideo() {
             <button
               type="button"
               onClick={() => setIsVideoOpen(true)}
-              className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-emerald-600 text-white shadow-[0_0_20px_8px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-110 hover:bg-emerald-500 hover:shadow-[0_0_30px_12px_rgba(16,185,129,0.5)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 sm:h-[72px] sm:w-[72px]"
+              className="group relative flex h-16 w-16 items-center justify-center rounded-full bg-[linear-gradient(135deg,#0B1F2A_0%,#00A8A8_50%,#18D0C8_75%,#00F2FE_100%)] text-white shadow-[0_0_20px_8px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-110 hover:bg-emerald-500 hover:shadow-[linear-gradient(135deg,#0B1F2A_0%,#00A8A8_50%,#18D0C8_75%,#00F2FE_100%)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-emerald-300 sm:h-[72px] sm:w-[72px]"
               aria-label="Play video"
             >
               {/* Glowing Pulse Ring */}
-              <span className="absolute inset-0 rounded-full bg-emerald-400/50 animate-ping" />
+              <span className="absolute inset-0 rounded-full bg-[linear-gradient(135deg,#0B1F2A_0%,#00A8A8_50%,#18D0C8_75%,#00F2FE_100%)] animate-ping" />
 
               {/* Play Icon */}
               <svg
@@ -121,8 +121,6 @@ export default function HeroVideo() {
           </div>
         </div>
       </div>
-
-      {/* Right-Side Slider Navigation */}
       <div className="absolute right-5 top-1/2 z-30 flex -translate-y-1/2 flex-col items-center gap-4 sm:right-8 md:right-12">
         {slidesData.map((slide, index) => (
           <button
@@ -139,8 +137,6 @@ export default function HeroVideo() {
           />
         ))}
       </div>
-
-      {/* Video Modal */}
       {isVideoOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4 backdrop-blur-sm"

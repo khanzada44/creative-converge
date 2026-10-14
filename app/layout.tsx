@@ -30,10 +30,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-black text-white selection:bg-emerald-500 selection:text-white">
-        {/* 2. Yahan Navbar lagayein taake har page par show ho */}
         <Navbar />
-        
-        {/* Main page content */}
         <main className="flex-grow">
           {children}
         </main>

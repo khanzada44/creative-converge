@@ -95,16 +95,16 @@ export default function Footer() {
             {/* Navigation Columns */}
             {footerLinks.map((column) => (
               <div key={column.title} className="min-w-0">
-                <h3 className="mb-[15px] text-[23px] font-bold leading-[1.2] tracking-[-0.5px] text-white">
+                <h3 className="mb-[13px] text-[19px]  tracking-[-0.5px] text-white">
                   {column.title}
                 </h3>
 
-                <ul className="space-y-[5px]">
+                <ul className="">
                   {column.links.map((item) => (
                     <li key={item}>
                       <Link
                         href="#"
-                        className="text-[17px] font-normal leading-[1.35] text-[#a9adbb] transition-colors duration-200 hover:text-white"
+                        className="text-[13px] text-[#a9adbb] transition-colors duration-200 hover:text-white"
                       >
                         {item}
                       </Link>
@@ -122,7 +122,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 lg:grid-cols-[1.55fr_1.25fr_1.25fr_1.25fr_1.25fr] lg:gap-[35px]">
             {/* Social Icons */}
             <div className="min-w-0">
-              <div className="mb-[35px] flex items-center gap-[20px]">
+              <div className="mb-3.75 flex items-center gap-[20px]">
                 {socialLinks.map(({ icon: Icon, label, href }) => (
                   <a
                     key={label}
@@ -142,11 +142,11 @@ export default function Footer() {
 
             {/* Working Hours */}
             <div className="min-w-0">
-              <h3 className="mb-[15px] text-[23px] font-bold leading-[1.2] tracking-[-0.5px] text-white">
+              <h3 className="mb-3.75 text-[19px]   leading-[1.2] tracking-[-0.5px] text-white">
                 Working hours:
               </h3>
 
-              <p className="text-[17px] leading-[1.7] text-[#a9adbb]">
+              <p className="text-[15px] text-[#a9adbb]">
                 Mon - Fri: 9 am - 6 pm
                 <br />
                 Sat, Sun: Holiday
@@ -155,24 +155,24 @@ export default function Footer() {
 
             {/* Address */}
             <div className="min-w-0">
-              <h3 className="mb-[15px] text-[23px] font-bold leading-[1.2] tracking-[-0.5px] text-white">
+              <h3 className="mb-3.75 text-[19px]  tracking-[-0.5px] text-white">
                 Address:
               </h3>
 
-              <p className="text-[17px] leading-[1.7] text-[#a9adbb]">
+              <p className="text-[13px]">
                 19002 Mission Park Dr, Richmond, TX 77407
               </p>
             </div>
 
             {/* Contact */}
             <div className="min-w-0">
-              <h3 className="mb-[15px] text-[23px] font-bold leading-[1.2] tracking-[-0.5px] text-white">
+              <h3 className="mb-3.75 text-[19px] tracking-[-0.5px] text-white">
                 Hit us up:
               </h3>
 
               <a
                 href="mailto:info@websdesignusa.com"
-                className="break-words text-[17px] leading-[1.7] text-[#a9adbb] transition-colors hover:text-white"
+                className="wrap-break-word text-[17px] text-[#a9adbb] transition-colors hover:text-white"
               >
                 info@websdesignusa.com
               </a>
@@ -180,13 +180,13 @@ export default function Footer() {
 
             {/* Trustpilot */}
             <div className="min-w-0">
-              <h3 className="mb-[15px] text-[23px] font-bold leading-[1.2] tracking-[-0.5px] text-white">
+              <h3 className="mb-3.75 text-[19px]  tracking-[-0.5px] text-white">
                 Trust Pilot
               </h3>
 
               <a
                 href="#"
-                className="text-[19px] text-[#079bd3] transition-colors hover:text-sky-300"
+                className="text-[16px] text-[#079bd3] transition-colors hover:text-sky-300"
               >
                 Trustpilot
               </a>

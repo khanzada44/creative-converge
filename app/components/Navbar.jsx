@@ -67,7 +67,7 @@ export default function Navbar() {
               />
             </Link>
 
-            <nav className="hidden items-center gap-8 text-[15px] font-semibold md:flex">
+            <nav className="hidden items-center gap-8 text-[15px]   md:flex">
               {/* Services dropdown (hover) */}
               <div className="relative" onMouseEnter={openServices} onMouseLeave={closeServices}>
                 <button
@@ -97,7 +97,7 @@ export default function Navbar() {
                       <li key={item.href}>
                         <Link
                           href={item.href}
-                          className="block px-7 py-3.5 text-[13px] font-semibold uppercase tracking-wide text-white transition-colors duration-200 hover:bg-emerald-700/80"
+                          className="block px-7 py-3.5 text-[13px]   uppercase tracking-wide text-white transition-colors duration-200 hover:bg-emerald-700/80"
                         >
                           {item.label}
                         </Link>
@@ -107,9 +107,9 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <Link href="/pricing" className="transition-colors hover:text-emerald-400">Pricing</Link>
-              <Link href="/cases" className="transition-colors hover:text-emerald-400">Cases</Link>
-              <Link href="/contact" className="transition-colors hover:text-emerald-400">Contact us</Link>
+              <Link href="/pricing" className="transition-colors hover:text-[#00A8A8]">Pricing</Link>
+              <Link href="/cases" className="transition-colors hover:text-[#00A8A8]">Cases</Link>
+              <Link href="/contact" className="transition-colors hover:text-[#00A8A8]">Contact us</Link>
             </nav>
           </div>
 
@@ -117,13 +117,13 @@ export default function Navbar() {
           <div className="hidden items-center gap-8 xl:flex">
             <a
               href="mailto:info@websdesignusa.com"
-              className="text-[15px] font-semibold text-white transition-colors hover:text-emerald-400"
+              className="text-[15px]   text-white transition-colors hover:text-[#00A8A8]"
             >
               info@websdesignusa.com
             </a>
             <Link
               href="/quote"
-              className="rounded-full border-2 border-emerald-600 px-9 py-3 text-[15px] font-semibold text-white transition-all duration-300 hover:bg-emerald-600"
+              className="rounded-full border-2 border-[#00A8A8] px-9 py-3 text-[15px]   text-white transition-all duration-300 hover:bg-[#00A8A8]"
             >
               Get a quote
             </Link>
@@ -153,9 +153,9 @@ export default function Navbar() {
           </button>
         </div>
 
-        <ul className="mt-4 px-8 text-[14px] font-semibold">
+        <ul className="mt-4 px-8 text-[14px]  ">
           <li>
-            <Link href="/about" onClick={closePanel} className="block py-[11px] transition-colors hover:text-emerald-400">
+            <Link href="/about" onClick={closePanel} className="block py-[11px] transition-colors hover:text-[#00A8A8]">
               About us
             </Link>
           </li>
@@ -164,7 +164,7 @@ export default function Navbar() {
           <li>
             <button
               onClick={() => setIsSideServicesOpen(!isSideServicesOpen)}
-              className="flex items-center gap-1.5 py-[11px] transition-colors hover:text-emerald-400 focus:outline-none"
+              className="flex items-center gap-1.5 py-[11px] transition-colors hover:text-[#00A8A8] focus:outline-none"
             >
               Services
               <ChevronDown
@@ -182,7 +182,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={closePanel}
-                    className="block px-3 py-[10px] text-[12px] font-semibold leading-tight transition-colors hover:bg-emerald-950"
+                    className="block px-3 py-[10px] text-[12px]   leading-tight transition-colors hover:bg-emerald-950"
                   >
                     {item.label}
                   </Link>
@@ -192,17 +192,17 @@ export default function Navbar() {
           </li>
 
           <li>
-            <Link href="/pricing" onClick={closePanel} className="block py-[11px] transition-colors hover:text-emerald-400">
+            <Link href="/pricing" onClick={closePanel} className="block py-[11px] transition-colors hover:text-[#00A8A8]">
               Pricing
             </Link>
           </li>
           <li>
-            <Link href="/cases" onClick={closePanel} className="block py-[11px] transition-colors hover:text-emerald-400">
+            <Link href="/cases" onClick={closePanel} className="block py-[11px] transition-colors hover:text-[#00A8A8]">
               Cases
             </Link>
           </li>
           <li>
-            <Link href="/contact" onClick={closePanel} className="block py-[11px] transition-colors hover:text-emerald-400">
+            <Link href="/contact" onClick={closePanel} className="block py-[11px] transition-colors hover:text-[#00A8A8]">
               Contact us
             </Link>
           </li>
@@ -224,11 +224,11 @@ export default function Navbar() {
         </form>
 
         {/* Social links */}
-        <div className="mt-8 flex items-center justify-center gap-8 pb-6 text-[12px] font-semibold uppercase">
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="transition-colors hover:text-emerald-400">
+        <div className="mt-8 flex items-center justify-center gap-8 pb-6 text-[12px]   uppercase">
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="transition-colors hover:text-[#00A8A8]">
             LinkedIn
           </a>
-          <a href="https://facebook.com" target="_blank" rel="noreferrer" className="transition-colors hover:text-emerald-400">
+          <a href="https://facebook.com" target="_blank" rel="noreferrer" className="transition-colors hover:text-[#00A8A8]">
             Facebook
           </a>
         </div>
