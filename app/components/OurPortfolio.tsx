@@ -99,86 +99,90 @@ export default function OurLatestCases() {
   return (
     <section className="relative overflow-hidden bg-black px-6 py-20 font-['Poppins',sans-serif] text-white sm:px-10 lg:px-[100px] lg:py-[130px]">
       
-      {/* Header Area */}
-      <div className="relative mb-14 flex flex-col md:flex-row md:items-end md:justify-between">
+      {/* Main Container Added Here */}
+      <div className="max-w-7xl mx-auto w-full">
         
-        {/* Background Large Watermark Text */}
-        <span className="pointer-events-none absolute -top-10 left-0 z-0 select-none text-7xl   uppercase tracking-wider text-white/[0.04] sm:text-8xl md:-top-16 lg:text-[140px]">
-          portfolio
-        </span>
+        {/* Header Area */}
+        <div className="relative mb-14 flex flex-col md:flex-row md:items-end md:justify-between">
+          
+          {/* Background Large Watermark Text */}
+          <span className="pointer-events-none absolute -top-10 left-0 z-0 select-none text-7xl uppercase tracking-wider text-white/[0.04] sm:text-8xl md:-top-16 lg:text-[140px]">
+            portfolio
+          </span>
 
-        {/* Main Heading & Content (Foreground) with Reveal Animation */}
-        <div className="relative z-10">
-          <Reveal from={0.8} delay={100}>
-            <div className="flex items-center gap-3">
-              <span className="inline-block h-[2px] w-12 bg-white" />
-              <span className="text-sm font-normal tracking-wide text-white/80">
-                portfolio
-              </span>
-            </div>
-          </Reveal>
+          {/* Main Heading & Content (Foreground) with Reveal Animation */}
+          <div className="relative z-10">
+            <Reveal from={0.8} delay={100}>
+              <div className="flex items-center gap-3">
+                <span className="inline-block h-[2px] w-12 bg-white" />
+                <span className="text-sm font-normal tracking-wide text-white/80">
+                  portfolio
+                </span>
+              </div>
+            </Reveal>
 
-          <Reveal from={0.85} delay={200}>
-            <h2 className="mt-2 text-4xl   tracking-tight sm:text-5xl lg:text-6xl">
-              Our latest cases<span className="text-[#00A8A8]">.</span>
-            </h2>
-          </Reveal>
+            <Reveal from={0.85} delay={200}>
+              <h2 className="mt-2 text-4xl tracking-tight sm:text-5xl lg:text-6xl">
+                Our latest cases<span className="text-[#00A8A8]">.</span>
+              </h2>
+            </Reveal>
 
-          <Reveal from={0.9} delay={300}>
-            <p className="mt-3 max-w-[600px] text-sm font-normal leading-relaxed text-white/70 sm:text-base">
-              We always try to implement our creative ideas at the highest level. You can see it by looking at our portfolio.
-            </p>
-          </Reveal>
+            <Reveal from={0.9} delay={300}>
+              <p className="mt-3 max-w-[600px] text-sm font-normal leading-relaxed text-white/70 sm:text-base">
+                We always try to implement our creative ideas at the highest level. You can see it by looking at our portfolio.
+              </p>
+            </Reveal>
+          </div>
+          {/* Button Link */}
+          <div className="relative z-10 mt-6 md:mt-0">
+            <Reveal from={0.9} delay={400}>
+              <a
+                href="#all-cases"
+                className="group inline-flex items-center gap-2 text-sm font-medium tracking-wider text-white transition-colors hover:text-[#00A8A8]"
+              >
+                VIEW ALL CASES
+              </a>
+            </Reveal>
+          </div>
         </div>
-        {/* Button Link */}
-        <div className="relative z-10 mt-6 md:mt-0">
-          <Reveal from={0.9} delay={400}>
-            <a
-              href="#all-cases"
-              className="group inline-flex items-center gap-2 text-sm font-medium tracking-wider text-white transition-colors hover:text-[#00A8A8]"
-            >
-              VIEW ALL CASES
-              
-            </a>
-          </Reveal>
-        </div>
-      </div>
 
-      {/* Portfolio Grid with Individual Staggered Reveal Animations */}
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {portfolioItems.map((item, index) => (
-          <Reveal key={item.id} from={0.85} delay={150 + index * 100}>
-            <div
-              onClick={() => {
-                setActiveItem(item);
-                setIsZoomed(false);
-              }}
-              className="group relative h-[420px] w-full cursor-pointer overflow-hidden bg-neutral-900 sm:h-[450px]"
-            >
-              <Image
-                src={item.image}
-                alt={item.title}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
-              />
+        {/* Portfolio Grid with Individual Staggered Reveal Animations */}
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {portfolioItems.map((item, index) => (
+            <Reveal key={item.id} from={0.85} delay={150 + index * 100}>
+              <div
+                onClick={() => {
+                  setActiveItem(item);
+                  setIsZoomed(false);
+                }}
+                className="group relative h-[420px] w-full cursor-pointer overflow-hidden bg-neutral-900 sm:h-[450px]"
+              >
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-90" />
 
-              <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
-                <span className="text-xs font-medium text-[#00A8A8] mb-1">{item.category}</span>
-                <h3 className="text-lg   leading-snug sm:text-xl">
-                  {item.title}
-                </h3>
+                <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                  <span className="text-xs font-medium text-[#00A8A8] mb-1">{item.category}</span>
+                  <h3 className="text-lg leading-snug sm:text-xl">
+                    {item.title}
+                  </h3>
 
-                <div className="mt-4 flex items-center gap-2 text-sm font-medium text-white/80 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
-                  <span>Explore Project</span>
-                  <span>→</span>
+                  <div className="mt-4 flex items-center gap-2 text-sm font-medium text-white/80 opacity-0 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2">
+                    <span>Explore Project</span>
+                    <span>→</span>
+                  </div>
                 </div>
               </div>
-            </div>
-          </Reveal>
-        ))}
+            </Reveal>
+          ))}
+        </div>
+
       </div>
 
       {/* Lightbox */}
@@ -234,7 +238,7 @@ export default function OurLatestCases() {
                   </button>
                   <button
                     onClick={() => setActiveItem(null)}
-                    className="p-1 text-xl   text-white/70 transition-colors hover:text-white"
+                    className="p-1 text-xl text-white/70 transition-colors hover:text-white"
                     title="Close"
                   >
                     ✕
@@ -276,7 +280,7 @@ export default function OurLatestCases() {
 
                 {/* Footer */}
                 <div className="relative z-20 py-3 text-center">
-                  <span className="text-sm   tracking-wider text-white/80">
+                  <span className="text-sm tracking-wider text-white/80">
                     {activeItem.title}
                   </span>
                 </div>

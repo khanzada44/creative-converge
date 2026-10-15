@@ -160,7 +160,7 @@ export default function AboutSection() {
             style={{ transform: "translate3d(0, 0, 0)" }}
           >
             <img
-              src="https://creativeconverge.com/mockups/creativemock/wp-content/uploads/2024/08/rocket-contact.png"
+              src="/images/rocket-no-bg.png"
               alt="Rocket Graphic"
               className="block w-full h-auto object-contain"
             />

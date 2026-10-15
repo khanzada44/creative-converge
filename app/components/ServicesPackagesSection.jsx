@@ -18,8 +18,6 @@ const ServicesPackagesSection = () => {
         const rect = section.getBoundingClientRect();
         const vh = window.innerHeight;
 
-        // 0 = section screen ke neeche se aa raha hai (70% height par)
-        // 1 = section screen ke upar (10% height) tak pohonch gaya -> rocket apni final jagah par
         const raw = (vh * 0.7 - rect.top) / (vh * 0.6);
         const p = Math.min(1, Math.max(0, raw));
 
@@ -28,7 +26,6 @@ const ServicesPackagesSection = () => {
         const rW = wrap.offsetWidth;
         const rH = wrap.offsetHeight;
 
-        // START: neeche-left (aadha kata hua)  ->  END: upar-right (poora dikhta hua, image jaisa)
         const startX = -rW * 0.35;
         const startY = sH - rH * 0.7;
         const endX = Math.min(sW * 0.6, sW - rW * 0.95);
@@ -37,7 +34,6 @@ const ServicesPackagesSection = () => {
         const x = startX + (endX - startX) * p;
         const y = startY + (endY - startY) * p;
 
-        // -30deg (khara) -> 0deg (image wala natural 45deg tilt, flame ke sath)
         const rotate = -30 + p * 30;
 
         rocket.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${rotate}deg)`;
@@ -62,7 +58,7 @@ const ServicesPackagesSection = () => {
     return (
         <section
             ref={sectionRef}
-            className="relative w-full bg-white text-black pt-8 pb-20 px-7 overflow-hidden"
+            className="relative w-full bg-white text-black pt-8 pb-20 px-6 sm:px-10 overflow-hidden"
         >
             {/* Diagonal dark lines */}
             <div className="absolute right-[12%] top-0 bottom-0 pointer-events-none hidden lg:flex items-center">
@@ -83,14 +79,14 @@ const ServicesPackagesSection = () => {
                 </span>
             </div>
 
-            {/* Rocket: bada, section ke andar hi rehta hai, scroll par neeche-left se upar-right aa kar rukta hai */}
+            {/* Rocket */}
             <div
                 ref={rocketWrapRef}
                 className="pointer-events-none absolute left-0 top-0 z-20 w-48 sm:w-72 md:w-80"
             >
                 <div ref={rocketRef} style={{ willChange: "transform" }}>
                     <img
-                        src="https://creativeconverge.com/mockups/creativemock/wp-content/uploads/2024/08/rocket-contact.png"
+                        src="/images/rocket-no-bg.png"
                         alt="3D Rocket"
                         onLoad={schedule}
                         className="w-full h-auto object-contain drop-shadow-2xl"
@@ -98,47 +94,47 @@ const ServicesPackagesSection = () => {
                 </div>
             </div>
 
+            {/* Main Container Wrapper */}
+            <div className="max-w-7xl mx-auto w-full relative z-10">
+                <div className="relative">
+                    <p
+                        className="ml-24 sm:ml-[120px] mb-1 text-lg sm:text-[22px] font-normal !text-black"
+                        style={{
+                            color: "#000000",
+                            WebkitTextFillColor: "#000000",
+                            background: "none",
+                            backgroundClip: "unset",
+                        }}
+                    >
+                        how much does it cost
+                    </p>
 
-<div className="relative z-10">
-  <div className="relative">
-    <p
-      className="ml-24 sm:ml-[120px] mb-1 text-lg sm:text-[22px] font-normal !text-black"
-      style={{
-        color: "#000000",
-        WebkitTextFillColor: "#000000",
-        background: "none",
-        backgroundClip: "unset",
-      }}
-    >
-      how much does it cost
-    </p>
+                    <h2
+                        className="mb-5 text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-extrabold tracking-tight leading-[1.1] !text-black"
+                        style={{
+                            color: "#000000",
+                            WebkitTextFillColor: "#000000",
+                            background: "none",
+                            backgroundImage: "none",
+                            backgroundClip: "unset",
+                        }}
+                    >
+                        Services packages.
+                    </h2>
 
-    <h2
-      className="mb-5 text-5xl sm:text-6xl md:text-7xl lg:text-[80px] font-extrabold tracking-tight leading-[1.1] !text-black"
-      style={{
-        color: "#000000",
-        WebkitTextFillColor: "#000000",
-        background: "none",
-        backgroundImage: "none",
-        backgroundClip: "unset",
-      }}
-    >
-      Services packages.
-    </h2>
-
-    <p
-      className="max-w-[860px] text-base sm:text-[22px] leading-relaxed !text-black"
-      style={{
-        color: "#000000",
-        WebkitTextFillColor: "#000000",
-        background: "none",
-      }}
-    >
-      We've got a lot of awards for our products and services that became
-      popular in the world.
-    </p>
-  </div>
-</div>
+                    <p
+                        className="max-w-[860px] text-base sm:text-[22px] leading-relaxed !text-black"
+                        style={{
+                            color: "#000000",
+                            WebkitTextFillColor: "#000000",
+                            background: "none",
+                        }}
+                    >
+                        We've got a lot of awards for our products and services that became
+                        popular in the world.
+                    </p>
+                </div>
+            </div>
         </section>
     );
 };
